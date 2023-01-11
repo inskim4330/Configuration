@@ -35,7 +35,7 @@ if !exists('g:syntax_on') | syntax enable | endif
 set encoding=utf-8
 scriptencoding utf-8
 
-colorscheme pablo
+colorscheme habamax
 set completeopt=menuone,noinsert,noselect,popuphidden
 set completepopup=highlight:Pmenu,border:off
 set backspace=indent,eol,start
@@ -43,7 +43,7 @@ set expandtab
 set shiftround
 set shiftwidth=4
 set softtabstop=-1
-set tabstop=8
+set tabstop=4
 set textwidth=80
 set title
 
@@ -117,6 +117,9 @@ augroup END
 
 
 " OmniSharp: {{{
+let g:OmniSharp_server_stdio=1
+let g:Omnicomplete_fetch_full_documentation=1
+let g:OmniSharp_server_use_mono = 0
 let g:OmniSharp_popup_position = 'peek'
 if has('nvim')
   let g:OmniSharp_popup_options = {
